@@ -15,9 +15,25 @@ services:
       app_net:
         ipv4_address: 172.100.100.2
 
+  # cassandra2: #uncomment lines to start a cluster
+  #   build:
+  #     context: ./cassandra
+  #     dockerfile: Dockerfile
+  #   image: cassandra:3.11.4
+  #   container_name: ttscassandra2
+  #   environment:
+  #    - CASSANDRA_SEEDS=ttscassandra
+  #   volumes:
+  #     - ./cassandra/node2_data:/var/lib/cassandra   
+  #   ports:
+  #     - 9043:9042
+  #   networks: 
+  #     app_net:
+  #       ipv4_address: 172.100.100.3
+
 networks:
   app_net:
-    driver: bridge
+    driver: bridge 
     ipam:
       config:
         - subnet: 172.100.100.0/24
