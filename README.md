@@ -29,5 +29,5 @@ docker exec -it ttscassandra bash
 <hr/>
 <br/>
 
-> If needed: `route /P add 172.17.0.0 MASK 255.255.255.0 10.0.75.0`
+> If needed: `route /P add 172.100.100.0 MASK 255.255.255.0 10.0.75.0`
 
